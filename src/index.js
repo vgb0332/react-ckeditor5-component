@@ -88,7 +88,6 @@ class CKEDITOR5 extends Component {
 
 CKEDITOR5.defaultProps = {
   name: 'CKEDITOR5',
-  loaded: false,
   type: 'classic',
   config: {
     ckfinder: {
@@ -105,7 +104,6 @@ CKEDITOR5.defaultProps = {
 
 CKEDITOR5.propTypes = {
   name: PropTypes.string,
-  loaded: PropTypes.bool,
   type: PropTypes.string,
   config: PropTypes.object,
   content: PropTypes.any,
