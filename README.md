@@ -9,6 +9,7 @@ As a prop, you can choose classic, balloon, inline, and decoupled-document
 [NOTE] Event handles haven't been added yet, will soon.
 
 ### usage
+For some reason, cannot get github demo working properly, you can pull from the repo and run locally if want.
 
 ```html
 import React from 'react';
@@ -39,12 +40,30 @@ also become
   <tr>
     <th>Name</th><th>Type</th><th>Default</th><th>Mandatory</th><th>Description</th>
   </tr>
-<!--   <tr>
-    <td>1</td><td>Tom Preston-Werner</td><td>Awesome</td>
+  <tr>
+    <td>name</td><td>string</td><td>'CKEDITOR5'</td><td>NO</td><td>This will the 'id' of the dom element you would like to add editor on</td>
   </tr>
   <tr>
-    <td>2</td><td>Albert Einstein</td><td>Nearly as awesome</td>
-  </tr> -->
+    <td>type</td><td>string</td><td>'classic'</td><td>NO</td><td>type of the editor: classic, inline, ballon, decoupled</td>
+  </tr>
+  <tr>
+    <td>config</td><td>object</td><td></td><td>NO</td><td>CKEDITOR5 config object(Like from the API document)</td>
+  </tr>
+  <tr>
+    <td>content</td><td>any(either tags or string preferrably)</td><td></td><td>NO</td><td>default content to start with</td>
+  </tr>
+  <tr>
+    <td>width</td><td>string</td><td></td><td>NO</td><td>width of the editor(ex. '500px')</td>
+  </tr>
+  <tr>
+    <td>height</td><td>string</td><td></td><td>NO</td><td>height of the editor(ex. '500px')</td>
+  </tr>
+  <tr>
+    <td>className</td><td>string</td><td></td><td>NO</td><td> custom className to the editor if you want </td>
+  </tr>
+  <tr>
+    <td>onChange</td><td>function</td><td></td><td>NO</td><td> onChange event to retrieve data. The return value would be same as eidtor.getData() value from the regular ckeditor(ex. <p>hi!</p>)</td>
+  </tr>
 </table>
 
 ## Licence
