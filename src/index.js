@@ -27,7 +27,7 @@ class CKEDITOR5 extends Component {
     this.state = {
       name: this.props.name,
       loaded: false,
-      type: 'classic',
+      type: this.props.type,
       config: this.props.config,
     }
   }
@@ -51,18 +51,23 @@ class CKEDITOR5 extends Component {
 
   componentDidUpdate() {
     const { name, instance, config } = this.state;
-    const { height, width } = this.props;
+    const { type, height, width, onChange } = this.props;
     if(instance) return false;
-    //Create Classic Editor
-    window.ClassicEditor
+    //Create  Editor
+    let editor;
+    if(type === 'classic') editor = window.ClassicEditor;
+    if(type === 'inline') editor = window.InlineEditor;
+    if(type === 'balloon') editor = window.BalloonEditor;
+    if(type === 'decoupled') editor = window.DecoupledEditor;
+    editor
     .create( document.querySelector( "#" + name ), config )
     .then( editor => {
-      console.log( editor );
-
       const target = document.getElementsByClassName("ck-content")[0];
 
       if(height) target.style.height = height;
       if(width) target.style.width = height;
+
+      editor.model.document.on('change', onChange);
       this.setState({ instance: editor })
     })
     .catch( error => {
@@ -71,7 +76,6 @@ class CKEDITOR5 extends Component {
   }
 
   render() {
-    console.log(this.state);
     const { name, content, className } = this.props;
     return (
       <div id={name} className={className} >
@@ -96,6 +100,7 @@ CKEDITOR5.defaultProps = {
   width: '',
   height: '',
   className: '',
+  onChange: ()=>{}
 };
 
 CKEDITOR5.propTypes = {
@@ -107,11 +112,7 @@ CKEDITOR5.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   className: PropTypes.string,
-  // config: PropTypes.object,
-  // isScriptLoaded: PropTypes.bool,
-  // scriptUrl: PropTypes.string,
-  // activeClass: PropTypes.string,
-  // events: PropTypes.object
+  onChange: PropTypes.func,
 };
 
 
