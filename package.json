@@ -1,7 +1,7 @@
 {
   "name": "react-ckeditor5-component",
   "version": "1.0.1",
-  "description": "",
+  "description": "react-ckeditor5-component",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,10 @@
   "peerDependencies": {
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgb0332/react-ckeditor5-component"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
