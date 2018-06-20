@@ -62,7 +62,7 @@ also become
     <td>className</td><td>string</td><td></td><td>NO</td><td> custom className to the editor if you want </td>
   </tr>
   <tr>
-    <td>onChange</td><td>function</td><td></td><td>NO</td><td> onChange event to retrieve data. The return value would be same as eidtor.getData() value from the regular ckeditor(ex. '<p>hi!</p>')</td>
+    <td>onChange</td><td>function</td><td></td><td>NO</td><td> onChange event to retrieve data. The return value would be same as eidtor.getData() value from the regular ckeditor</td>
   </tr>
 </table>
 
