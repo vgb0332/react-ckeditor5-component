@@ -1,6 +1,6 @@
 {
   "name": "react-ckeditor5-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
