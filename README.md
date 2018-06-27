@@ -1,7 +1,16 @@
+## As of 18-06-27
+
+I thought I added the onChange property but I was passing some weird value. But it's fixed now! You can check the editor content by assinging onChange of your own. It passes the content value as a param, see the example for the usage.
+
+By the way, frankly i have never been a ckeditor user since a few weeks ago, so I'm wondering what kinds of event handlers are preferred or needed. Inform me on github then I will add the requested(Don't need to be just events) as soon as possible.
+
 ## Install
 
 https://www.npmjs.com/package/react-ckeditor5-component
 
+npm install react-ckeditor5-component
+
+in document: import CKEDITOR5 from 'react-ckeditor5-component';
 ## Feature
 Based on the lastest version of CKEditor5, providing ONLY standard edition currently.
 As a prop, you can choose classic, balloon, inline, and decoupled-document
