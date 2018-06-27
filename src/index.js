@@ -67,7 +67,9 @@ class CKEDITOR5 extends Component {
       if(height) target.style.height = height;
       if(width) target.style.width = height;
 
-      editor.model.document.on('change', onChange);
+      editor.model.document.on('change', function( e ) {
+        onChange(editor.getData())
+      });
       this.setState({ instance: editor })
     })
     .catch( error => {
